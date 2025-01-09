@@ -2,6 +2,16 @@
 
 USERID=$(id -u)
 
+VALIDATE()
+{
+if [ $1 -ne 0 ]
+  then
+    echo "$2 installation failed"
+    exit 1
+  else
+    echo "successfully installed $2"
+fi
+}
 if [ $USERID -ne 0]
 then
   echo "you must have sudo access execute this script"
@@ -14,13 +24,7 @@ if [ $? -ne 0 ]
 then
   echo "install mysql..."
   dnf install mysql -y
-  if [ $? -ne 0 ]
-  then
-    echo "mysql installation failed"
-    exit 1
-  else
-    echo "successfully installed mysql"
-  fi
+  VALIDATE  $? "mysql"
 else
   echo "mysql already installed"
 fi
@@ -30,12 +34,7 @@ if [ $? -ne 0 ]
 then
   echo "git installed now"
   dnf install git -y
-  if [$? -ne 0]
-  then
-    echo "git installation failed..."
-  else
-    echo "git installation success ..."
-  fi
+  VALIDATE $? "GIT"
 else
   echo "git already installed "
 fi
