@@ -12,7 +12,7 @@ if [ $1 -ne 0 ]
     echo "successfully installed $2"
 fi
 }
-if [ $USERID -ne 0]
+if [ $USERID -ne 0 ]
 then
   echo "you must have sudo access execute this script"
   exit 1
