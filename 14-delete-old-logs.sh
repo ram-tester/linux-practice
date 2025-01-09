@@ -49,5 +49,5 @@ do
   echo "deleting filepath : $filepath"  &>>LOG_FILE_NAME
   rm -rf $filepath
   echo "deleted file: $filepath"
-done <<< FILES_TO_DELETE
+done <<< $FILES_TO_DELETE
 
