@@ -21,5 +21,3 @@ echo -e "message :$MSG"
 echo "$MSG" | mutt -s "high disk usage" --rampatropj@gmail.com
 
 
-
-
