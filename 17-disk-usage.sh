@@ -12,9 +12,9 @@ do
   PARTITION=$(echo $line | awk -F " " '{print $NF}')# last fragment
   if [ $USAGE -ge $DISK_THRESHOLD ]
   then
-    MSG +="High disk partition :$PARTITION usage is: $USAGE"
+    MSG+="High disk partition :$PARTITION usage is: $USAGE \n"
   fi
-done <<<$DISK_USAGE
+done <<< $DISK_USAGE
 
 echo -e "message :$MSG"
 
