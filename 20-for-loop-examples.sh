@@ -6,8 +6,8 @@ num=$n
 while [ $n -gt 0 ]
 do
     r=$(($n % 10))
-    cube=$((r*r*r))
-	arm=$((arm + cube))
+    cube=$(($r*$r*$r))
+	arm=$(($arm + $cube))
 	n=$(($n / 10))
 done
 echo "after loop arm: $arm"
