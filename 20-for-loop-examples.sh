@@ -2,6 +2,7 @@
 echo "Enter A Number: "
 read -s n
 nod=${#n}
+echo "no of digits: $nod"
 arm=0
 num=$n
 while [ $n -gt 0 ]
