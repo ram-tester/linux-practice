@@ -1,7 +1,7 @@
 #!/bin/bash/
 echo "Enter A Number: "
 read -s n
-nod=${#n}
+nod=${#n}       # calculates no of digits
 echo "no of digits: $nod"
 arm=0
 num=$n
