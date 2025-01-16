@@ -11,8 +11,9 @@ do
 	n=$(($n / 10))
 done
 echo $arm
-if [ $arm -eq "$num" ]; then
-	echo "Armstrong"
+if [ $arm -eq $num ]
+then
+	echo "given num is Armstrong :$num"
 else
-	echo "Not Armstrong"
+	echo "Not Armstrong: $num"
 fi
