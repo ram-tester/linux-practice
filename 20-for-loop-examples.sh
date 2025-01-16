@@ -1,17 +1,18 @@
-NUMBER=$1
-res=0
-NUMBER1=$1
-while [ $NUMBER1 -ge 0 ]
+#!/bin/bash/
+echo "Enter A Number: "
+read -s n
+arm=0
+num=$n
+while [ $n -gt 0 ]
 do
-    rem=$((NUMBER%10))
-    cube=$((rem*rem*rem))
-    res=$((res+cube))
-    NUMBER=$((NUMBER/10))
+    r=$(($n % 10))
+    cube=$((r*r*r))
+	arm=$((arm + cube))
+	n=$(($n / 10))
 done
-echo $res
-if [ $res --eq $NUMBER1 ]
-then
-    echo "given num is armstrong $res"
+echo $arm
+if [ $arm -eq "$num" ]; then
+	echo "Armstrong"
 else
-    echo "not a armstrong...$res"
+	echo "Not Armstrong"
 fi
