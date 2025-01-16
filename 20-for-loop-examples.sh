@@ -8,7 +8,7 @@ num=$n
 while [ $n -gt 0 ]
 do
     r=$(($n % 10))
-    cube=$(($r^$nod))
+    cube=$(($r**$nod))
 	arm=$(($arm + $cube))
 	n=$(($n / 10))
 done
